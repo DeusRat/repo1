@@ -1,0 +1,19 @@
+import random
+
+def generate_random_numbers(count):
+    numbers = [random.randint(1, 100) for _ in range(count)]
+    return numbers
+
+def find_even_numbers(numbers):
+    even_numbers = [num for num in numbers if num % 2 == 0]
+    return even_numbers
+
+def main():
+    random_numbers = generate_random_numbers(10)
+    print("Сгенерированные случайные числа:", random_numbers)
+
+    even_numbers = find_even_numbers(random_numbers)
+    print("Четные числа:", even_numbers)
+
+if __name__ == "__main__":
+    main()
